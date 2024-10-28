@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription</title>
+</head>
+<body>
+    <h1>s'inscrire</h1>
+    <p>vous êtes</p>
+    
+        
+            <input type="radio" name="type d'Inscription" value="Employe">
+            <label for="Employé">Emploiyé</label>
+          
+
+            <input type="radio" name="type d'Inscription" value="Etreprise">
+            <label for="Etreprise">Entreprise</label><br>
+    <fieldset>
+        <legend>les information pour l'Employe</legend>
+        <table>
+            <tr>
+                <td><label for="nom">Nom</label></td>
+                <td><input type="text" name="Nom" placeholder="votre nome"></td>
+            </tr>
+            <tr>
+
+                <td><label for="prenom">Prénom</label></td>
+                <td><input type="text" name="prenom" placeholder="votre prénom"><br></td>
+            </tr>
+            <tr>
+        
+                <td><label for="adress">Adresse</label></td>
+                <td><input type="text" name="adress" placeholder="votre adress"></td>
+            </tr>
+            <tr>
+                <td><label for="tel">Tel</label></td>
+                <td><input type="tel" name="tel" placeholder="saisir votre numéro"><br></td>
+            </tr>
+            <tr>
+                <td><label> Date de Naissance:</label></td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td><label>Filiére</label></td>
+                <td><input type="text" placeholder="votre Filiére"></td>
+            </tr>
+            <tr>
+                <td><label>Gmail</label></td>
+                <td><input type="text" placeholder="votre Gmail"></td>
+            </tr>
+            <tr>
+                <td><label for="password">créer Mot de passe </label></td>
+                <td><input type="password" id="password" name="password"></td>
+            </tr>
+            <tr>
+                <td><label for="confirm-password">Confirmer le mot de passe </label></td>
+                <td><input type="password" id="confirm-password" name="confirm_password" ></td>
+            </tr>
+    </table>
+</fieldset> 
+<fieldset>
+    <legend>les information pour l'Entreprise</legend>
+    <table>
+        <tr>
+            <td><label>Nom de l'entreprise :</label></td>
+            <td><input type="text"  name="nom_entreprise" placeholder="saisir nom-entreprise"></td>
+        </tr>
+        <tr>
+            <td><label for="nom-directeur">Nom du Directeur :</label></td>
+            <td><input type="text"  name="nom_directeur"></td>
+        </tr>
+        <tr>
+            <td><label for="prenom de directeur">Prénom du Directeur :</label></td>
+            <td><input type="text"  name="prenom de directeur"></td>
+        </tr>
+        <tr>
+            <td><label>Email d'Entreprise :</label></td>
+            <td><input type="text" placeholder=" saisir Email d'Etreprise"></td>
+        </tr>
+        <tr>
+            <td><label for="tel">Tel :</label></td>
+            <td><input type="tel" name="tel" placeholder="saisir votre numéro"><br></td>
+        </tr>
+        <tr>
+            <td><label>Spécialités de l'entreprise</label></td>
+            <td>
+                <select>
+                    <option>Spécialités</option>
+                    <option>Informatique</option>
+                    <option> Mécanique</option>
+                    <option>Electrique</option>
+                    <option>industriel</option>
+                    <option>Autre</option>
+                </select>
+            </td>
+
+        </tr>
+        <tr>
+            <td><label for="password">créer Mot de passe </label></td>
+            <td><input type="password"  name="password"></td>
+        </tr>
+        <tr>
+            <td><label for="confirm-password">Confirmer le mot de passe </label></td>
+            <td><input type="password"  name="confirm_password" ></td>
+        </tr>
+
+        
+    </table>
+</fieldset>
+
+<button type="submit">S'inscrire</button>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherche d'emploi</title>
+</head>
+<body>
+    <h1>Recherche d'emploi</h1>
+
+    <form action="resultat_recherche.php" method="GET">
+        <label for="titre">Titre du poste :</label>
+        <input type="text"  name="titre" ><br><br>
+
+        <label for="localisation">Localisation :</label>
+        <input type="text"  name="localisation" placeholder="Ex : Rabat"><br><br>
+
+        <label for="experience">Expérience requise (années) :</label>
+        <input type="number"  name="experience" min="0" placeholder="Ex :  2 ans "><br><br>
+
+        <label for="salaire">Salaire minimum (DH) :</label>
+        <input type="number"  name="salaire"  placeholder="Ex : 5000DH"><br><br>
+
+        <button type="submit">Rechercher</button>
+    </form>
+</body>
+</html>

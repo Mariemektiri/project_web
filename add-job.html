@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajouter une offre d'emploi</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="home.html">Accueil</a></li>
+            <li><a href="signup.html">S'inscrire</a></li>
+            <li><a href="login.html">Connexion</a></li>
+            <li><a href="search.html">Rechercher un emploi</a></li>
+            <li><a href="add-job.html">Ajouter offre d'emploi</a></li>
+            <li><a href="profile.html">Voir le profil</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <h1>Ajouter une offre d'emploi</h1>
+
+     
+    <form action="ajouter_offre.php" method="POST">
+        <label for="titre">Titre du poste :</label>
+        <input type="text" id="titre" name="titre" required><br><br>
+
+        <label for="description">Description de l'offre :</label><br>
+        <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
+
+        <label for="localisation">Localisation :</label>
+        <input type="text" id="localisation" name="localisation" required><br><br>
+
+        <label for="type_contrat">Type de contrat :</label>
+        <select id="type_contrat" name="type_contrat" required>
+            <option value="CDI">CDI</option>
+            <option value="CDD">CDD</option>
+            <option value="Stage">Stage</option>
+            <option value="Freelance">Freelance</option>
+        </select><br><br>
+
+        <label for="salaire">Salaire :</label>
+        <input type="number" id="salaire" name="salaire" placeholder="Ex : 5000"><br><br>
+
+        <label for="experience">Expérience requise (années) :</label>
+        <input type="number" id="experience" name="experience" min="0"><br><br>
+
+        <label for="entreprise">Nom de l'entreprise :</label>
+        <input type="text" id="entreprise" name="entreprise" required><br><br>
+
+        <label for="site_entreprise">Site web de l'entreprise :</label>
+        <input type="url" id="site_entreprise" name="site_entreprise"><br><br>
+
+        <button type="submit">Ajouter l'offre</button>
+    </form>
+</body>
+</html>
