@@ -69,7 +69,7 @@ nav ul {
 
 nav ul li {
     margin: 0 15px;
-    position: relative; /* Nécessaire pour centrer les cercles */
+    position: relative; 
 }
 
 nav ul li a {
