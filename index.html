@@ -6,6 +6,38 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <script>
+
+        function getCookie(name) {
+            var cookieArr = document.cookie.split(";");
+
+            for (var i = 0; i < cookieArr.length; i++) {
+                var cookie = cookieArr[i].trim();
+
+                if (cookie.startsWith(name + "=")) {
+                    return cookie.substring(name.length + 1);
+                }
+            }
+
+            return null;  
+        }
+
+       
+        function displayUserName() {
+            var userName = getCookie("username");
+
+            if (userName) {
+                document.getElementById("welcome-message").innerHTML = "Welcome"+" "+ userName +" "+"to Enginhire";
+            } else {
+                document.getElementById("welcome-message").innerHTML = "Welcome"+" "+"visitor" +" "+ "to Enginhire";
+            }
+        }
+
+        
+        window.onload = function() {
+            displayUserName();
+        };
+    </script>
 </head>
 <body>
    <nav>
@@ -22,7 +54,8 @@
 </nav>
 
     <div class="animated-background"></div>
-    <h1 class="style1">Welcome to Enginhire</h1>
+    
+     <h1 class="style1"  id="welcome-message"></h1>
     <p class="style2">Search and apply for the best engineering job opportunities.</p>
     
     <h2><center>Search for Jobs</center></h2>
