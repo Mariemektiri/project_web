@@ -3,129 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription</title>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
     <nav>
+        <h1 class="logo">Enginhire</h1>
         <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="signup.html">S'inscrire</a></li>
-            <li><a href="login.html">Connexion</a></li>
-            <li><a href="job_list.html">Liste des offres d'emploi</a></li>
-            <li><a href="search.html">Rechercher un emploi</a></li>
-            <li><a href="add-job.html">Ajouter offre d'emploi</a></li>
-            <li><a href="contact.html">Contact</a></li>
-           
+            <li style="--index: 0;"><a href="index.html">Home</a></li>
+            <li style="--index: 1;"><a href="signup.html">Sign Up</a></li>
+            <li style="--index: 2;"><a href="login.html">Login</a></li>
+            <li style="--index: 3;"><a href="job_list.html">Job Listings</a></li>
+            <li style="--index: 4;"><a href="search.html">Search for a Job</a></li>
+            <li style="--index: 5;"><a href="add-job.html">Post a Job</a></li>
+            <li style="--index: 6;"><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <h1>s'inscrire</h1>
-    <p>vous êtes</p>
-    
-        
-            <input type="radio" name="type d'Inscription" value="Employe">
-            <label for="Employé">Emploiyé</label>
-          
+    <div class="animated-background"></div>
+    <h1><center>Sign Up</center></h1>
+    <p>You are:</p>
+   <!-- Corrected radio button values -->
+<div>
+    <label for="Employee">Employee</label>
+    <input type="radio" name="signup_type" value="Employee">
+</div>
+<div>
+    <label for="Company">Company</label>
+    <input type="radio" name="signup_type" value="Company">
+</div>
 
-            <input type="radio" name="type d'Inscription" value="Etreprise">
-            <label for="Etreprise">Entreprise</label><br>
-    <fieldset>
-        <legend>les information pour l'Emploiyé</legend>
+    
+    <fieldset id="employee-info" style="display: none;">
+        <legend>Employee Information</legend>
         <table>
             <tr>
-                <td><label for="nom">Nom</label></td>
-                <td><input type="text" name="Nom" placeholder="votre nome"></td>
+                <td><label for="name">Name</label></td>
+                <td><input type="text" name="name" placeholder="Your name"></td>
             </tr>
             <tr>
-
-                <td><label for="prenom">Prénom</label></td>
-                <td><input type="text" name="prenom" placeholder="votre prénom"><br></td>
+                <td><label for="surname">Surname</label></td>
+                <td><input type="text" name="surname" placeholder="Your surname"><br></td>
             </tr>
             <tr>
-        
-                <td><label for="adress">Adresse</label></td>
-                <td><input type="text" name="adress" placeholder="votre adress"></td>
+                <td><label for="address">Address</label></td>
+                <td><input type="text" name="address" placeholder="Your address"></td>
             </tr>
             <tr>
-                <td><label for="tel">Tel</label></td>
-                <td><input type="tel" name="tel" placeholder="saisir votre numéro"><br></td>
+                <td><label for="phone">Phone</label></td>
+                <td><input type="tel" name="phone" placeholder="Enter your phone number"><br></td>
             </tr>
             <tr>
-                <td><label> Date de Naissance:</label></td>
+                <td><label>Date of Birth:</label></td>
                 <td><input type="date"></td>
             </tr>
             <tr>
-                <td><label>Filiére</label></td>
-                <td><input type="text" placeholder="votre Filiére"></td>
+                <td><label>Field of Study</label></td>
+                <td><input type="text" placeholder="Your field of study"></td>
             </tr>
             <tr>
-                <td><label>Gmail</label></td>
-                <td><input type="text" placeholder="votre Gmail"></td>
+                <td><label>Email</label></td>
+                <td><input type="text" placeholder="Your email"></td>
             </tr>
             <tr>
-                <td><label for="password">créer Mot de passe </label></td>
+                <td><label for="password">Create Password</label></td>
                 <td><input type="password" id="password" name="password"></td>
             </tr>
             <tr>
-                <td><label for="confirm-password">Confirmer le mot de passe </label></td>
-                <td><input type="password" id="confirm-password" name="confirm_password" ></td>
+                <td><label for="confirm-password">Confirm Password</label></td>
+                <td><input type="password" id="confirm-password" name="confirm_password"></td>
             </tr>
-    </table>
-</fieldset> 
-<fieldset>
-    <legend>les information pour l'Entreprise</legend>
-    <table>
-        <tr>
-            <td><label>Nom de l'entreprise :</label></td>
-            <td><input type="text"  name="nom_entreprise" placeholder="saisir nom-entreprise"></td>
-        </tr>
-        <tr>
-            <td><label for="nom-directeur">Nom du Directeur :</label></td>
-            <td><input type="text"  name="nom_directeur"></td>
-        </tr>
-        <tr>
-            <td><label for="prenom de directeur">Prénom du Directeur :</label></td>
-            <td><input type="text"  name="prenom de directeur"></td>
-        </tr>
-        <tr>
-            <td><label>Email d'Entreprise :</label></td>
-            <td><input type="text" placeholder=" saisir Email d'Etreprise"></td>
-        </tr>
-        <tr>
-            <td><label for="tel">Tel :</label></td>
-            <td><input type="tel" name="tel" placeholder="saisir votre numéro"><br></td>
-        </tr>
-        <tr>
-            <td><label>Spécialités de l'entreprise</label></td>
-            <td>
-                <select>
-                    <option>Spécialités</option>
-                    <option>Informatique</option>
-                    <option> Mécanique</option>
-                    <option>Electrique</option>
-                    <option>industriel</option>
-                    <option>Autre</option>
-                </select>
-            </td>
+        </table>
+    </fieldset> 
+    
+    <fieldset id="company-info" style="display: none;">
+        <legend>Company Information</legend>
+        <table>
+            <tr>
+                <td><label>Company Name:</label></td>
+                <td><input type="text" name="company_name" placeholder="Enter company name"></td>
+            </tr>
+            <tr>
+                <td><label for="director-name">Director's Name:</label></td>
+                <td><input type="text" name="director_name"></td>
+            </tr>
+            <tr>
+                <td><label for="director-surname">Director's Surname:</label></td>
+                <td><input type="text" name="director_surname"></td>
+            </tr>
+            <tr>
+                <td><label>Company Email:</label></td>
+                <td><input type="text" placeholder="Enter company email"></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone:</label></td>
+                <td><input type="tel" name="phone" placeholder="Enter your phone number"><br></td>
+            </tr>
+            <tr>
+                <td><label>Company Specialties</label></td>
+                <td>
+                    <select>
+                        <option>Specialties</option>
+                        <option>Computer Science</option>
+                        <option>Mechanical</option>
+                        <option>Electrical</option>
+                        <option>Industrial</option>
+                        <option>Other</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="password">Create Password</label></td>
+                <td><input type="password" name="password"></td>
+            </tr>
+            <tr>
+                <td><label for="confirm-password">Confirm Password</label></td>
+                <td><input type="password" name="confirm_password"></td>
+            </tr>
+        </table>
+    </fieldset>
 
-        </tr>
-        <tr>
-            <td><label for="password">créer Mot de passe </label></td>
-            <td><input type="password"  name="password"></td>
-        </tr>
-        <tr>
-            <td><label for="confirm-password">Confirmer le mot de passe </label></td>
-            <td><input type="password"  name="confirm_password" ></td>
-        </tr>
+    <button class="button2" type="submit">Sign Up</button>
+    <p>Already have an account? <a href="login.html">Log in here</a></p>
 
-        
-    </table>
-</fieldset>
-
-<button type="submit">S'inscrire</button>
-<p>Vous avez deja un compte ? <a href="login.html">connectez vous ici </a></p>
-
-<footer>
-    <p>&copy; 2024 Enginhire. Tous droits réservés.</p>
-</footer>
+    <footer>
+        <p>&copy; 2024 Enginhire. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,60 +1,64 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ajouter une offre d'emploi</title>
+    <title>Add a Job Offer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+   
+    
 </head>
 <body>
     <nav>
+        <h1 class="logo">Enginhire</h1>
         <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="signup.html">S'inscrire</a></li>
-            <li><a href="login.html">Connexion</a></li>
-            <li><a href="job_list.html">Liste des offres d'emploi</a></li>
-            <li><a href="search.html">Rechercher un emploi</a></li>
-            <li><a href="add-job.html">Ajouter offre d'emploi</a></li>
-            <li><a href="contact.html">Contact</a></li>
-           
+            <li style="--index: 0;"><a href="index.html">Home</a></li>
+            <li style="--index: 1;"><a href="signup.html">Sign Up</a></li>
+            <li style="--index: 2;"><a href="login.html">Login</a></li>
+            <li style="--index: 3;"><a href="job_list.html">Job Listings</a></li>
+            <li style="--index: 4;"><a href="search.html">Search for a Job</a></li>
+            <li style="--index: 5;"><a href="add-job.html">Post a Job</a></li>
+            <li style="--index: 6;"><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <h1>Ajouter une offre d'emploi</h1>
+    <div class="animated-background2"></div>
+    <h1 class="style3"><center>Add a Job Offer</center></h1>
 
-     
-    <form action="ajouter_offre.php" method="POST">
-        <label for="titre">Titre du poste :</label>
+    <form id="jobForm" >
+        <label for="titre">Job Title:</label>
         <input type="text" id="titre" name="titre" required><br><br>
 
-        <label for="description">Description de l'offre :</label><br>
+        <label for="description">Job Description:</label><br>
         <textarea id="description" name="description" rows="4" cols="50" required></textarea><br><br>
 
-        <label for="localisation">Localisation :</label>
+        <label for="localisation">Location:</label>
         <input type="text" id="localisation" name="localisation" required><br><br>
 
-        <label for="type_contrat">Type de contrat :</label>
+        <label for="type_contrat">Contract Type:</label>
         <select id="type_contrat" name="type_contrat" required>
-            <option value="CDI">CDI</option>
-            <option value="CDD">CDD</option>
-            <option value="Stage">Stage</option>
+            <option value="CDI">Permanent</option>
+            <option value="CDD">Temporary</option>
+            <option value="Stage">Internship</option>
             <option value="Freelance">Freelance</option>
         </select><br><br>
 
-        <label for="salaire">Salaire :</label>
-        <input type="number" id="salaire" name="salaire" placeholder="Ex : 5000"><br><br>
+        <label for="salaire">Salary:</label>
+        <input type="number" id="salaire" name="salaire" placeholder="Ex: 5000"><br><br>
 
-        <label for="experience">Expérience requise (années) :</label>
+        <label for="experience">Required Experience (in years):</label>
         <input type="number" id="experience" name="experience" min="0"><br><br>
 
-        <label for="entreprise">Nom de l'entreprise :</label>
+        <label for="entreprise">Company Name:</label>
         <input type="text" id="entreprise" name="entreprise" required><br><br>
 
-        <label for="site_entreprise">Site web de l'entreprise :</label>
+        <label for="site_entreprise">Company Website:</label>
         <input type="url" id="site_entreprise" name="site_entreprise"><br><br>
 
-        <button type="submit">Ajouter l'offre</button>
+        <button type="submit">Add Offer</button>
     </form>
     <footer>
-        <p>&copy; 2024 Enginhire. Tous droits réservés.</p>
+        <p>&copy; 2024 Enginhire. All rights reserved.</p>
     </footer>
 </body>
 </html>

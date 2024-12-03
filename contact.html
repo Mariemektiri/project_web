@@ -1,39 +1,40 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Contact - Enginhire</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     
     <nav>
+        <h1 class="logo">Enginhire</h1>
         <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="signup.html">S'inscrire</a></li>
-            <li><a href="login.html">Connexion</a></li>
-            <li><a href="job_list.html">Liste des offres d'emploi</a></li>
-            <li><a href="search.html">Rechercher un emploi</a></li>
-            <li><a href="add-job.html">Ajouter offre d'emploi</a></li>
-            <li><a href="contact.html">Contact</a></li>
-           
+            <li style="--index: 0;"><a href="index.html">Home</a></li>
+            <li style="--index: 1;"><a href="signup.html">Sign Up</a></li>
+            <li style="--index: 2;"><a href="login.html">Login</a></li>
+            <li style="--index: 3;"><a href="job_list.html">Job Listings</a></li>
+            <li style="--index: 4;"><a href="search.html">Search for a Job</a></li>
+            <li style="--index: 5;"><a href="add-job.html">Post a Job</a></li>
+            <li style="--index: 6;"><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
     
-    <h1>Contactez-nous</h1>
+    <h1><center>Contact Us</center></h1>
     <form action="/submit_contact" method="post">
-        <label for="name">Nom :</label>
-        <input type="text" id="name" name="name">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
         
-        <label for="email">Email :</label>
-        <input type="email" id="email" name="email">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
         
-        <label for="message">Message :</label>
-        <textarea id="message" name="message"></textarea>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
         
-        <button type="submit">Envoyer</button>
+        <button type="submit">Send</button>
     </form>
 </body>
 <footer>
-    <p>&copy; 2024 Enginhire. Tous droits réservés.</p>
+    <p>&copy; 2024 Enginhire. All rights reserved.</p>
 </footer>
 </html>

@@ -1,0 +1,470 @@
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}    
+
+body, h1, p, ul, li, form, input, label, nav, footer {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    
+    
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    margin-bottom: 20%;
+  }
+body {
+    background-color: azure;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.6;
+    padding-top: 60px;
+    padding-bottom: 70px;
+    display: flex;
+   flex-direction: column;
+}
+.content {
+    flex: 1; 
+  }
+
+nav {
+    background-color: teal;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%; 
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+nav .logo {
+    color: white;
+    font-size: 24px;
+    margin-left: 20px; 
+    font-weight: bold;
+    animation: fadeIn 1.5s ease-out;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+    position: relative; /* Nécessaire pour centrer les cercles */
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 1; /* Gérer la superposition avec le cercle */
+    transition: color 0.3s ease-in-out;
+    text-decoration: none; /* Removes underline for links */
+    padding: 15px 15px; /* Adds padding inside the link area */
+    border-radius: 10%; /* Ensures the circular look for links */
+    background-color: rgba(0, 0, 0, 0);
+    
+}
+
+/* Cercle transparent autour des liens */
+nav ul li::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 50px;
+    border-radius: 50%;
+    
+    z-index: 0;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+/* Effet au survol (hover) */
+nav ul li:hover::before {
+    
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+nav ul li:hover a {
+    color: #080807; /* Couleur du texte au survol */
+    text-decoration: none;
+    
+}
+
+form, fieldset {
+    max-width: 600px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    opacity: 0.6;
+    color: black;
+    border: 2px solid teal;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+   
+}
+fieldset {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+legend {
+    font-size: 18px;
+    font-weight: bold;
+    color: teal;
+    margin-bottom: 10px;
+}
+
+label {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  input[type="radio"] {
+    margin-right: 5px; 
+  }
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
+
+form button {
+    width: 100%;
+    padding: 8px;
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    
+}
+
+form button:hover {
+    background-color: #006666; 
+}
+
+.button2{
+    align-items: center;
+    background-color: teal;
+    padding: 10px;
+    width: 650px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 345px;
+
+}
+.button3{
+    align-items: center;
+    background-color: teal;
+    padding: 10px;
+    width: 70px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 45px;
+
+}
+a {
+    color: teal;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: teal;
+    color: white;
+    position: fixed;
+    width: 100%;
+    margin-top: 545px;
+    margin-bottom: 80px;
+
+}
+/* Animation fadeIn pour les titres */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Animation zoomIn pour les textes d'accueil */
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Animation slideInLeft pour les boutons ou les sections */
+@keyframes slideInLeft {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Ajout des styles d'animation */
+h1.style1 {
+    animation: zoomIn 1s ease-in-out;
+}
+
+p.style2 {
+    animation: fadeIn 2s ease-out;
+}
+
+nav ul li {
+    animation: slideInLeft 0.8s ease-in-out;
+    animation-delay: calc(0.2s * var(--index));
+     /* Masquer avant l'animation */
+}
+
+/* Animation sur hover pour les boutons */
+button, .button3 {
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+button:hover, .button3:hover {
+    transform: scale(1.1);
+    background-color: #028ea7;
+}
+
+
+.style1{
+    text-align: center;
+    font-family: 'Playfair Display'
+    text-decoration  underline;
+    font-style : italic;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    animation: zoomIn 1s ease-in-out;
+}
+.style2{
+    text-align: center;
+    font-size: 1.2rem;
+    color: #0d9488;
+    
+}
+form button {
+    width: auto; 
+    margin-top: 10px; 
+    
+    background-color:#0d9487 ; 
+    color: white; 
+    border: none; 
+    border-radius: 20px; 
+    
+    font-size: 15px; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+
+form button:hover {
+    background-color: #028ea7; 
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.2); 
+    
+}
+
+form button:active {
+    background-color: #030184; 
+    box-shadow: none; 
+}
+#description {
+    background-color: #f0f8ff; 
+    border: 1px solid #118891;
+    border-radius: 8px; 
+    padding: 12px; 
+    font-size: 14px; 
+    width: 100%; 
+    box-sizing: border-box; 
+}
+.style3{
+    font-family: 'Poppins', sans-serif; 
+    font-size: 40px; 
+}    
+@keyframes slideInLeft {
+        from { transform: translateX(-100px); opacity: 0; }
+        to { transform: translateX(0); opacity: 1; }
+    }    
+
+    .job-listings-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .job-listing {
+        background-color: white;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 15px;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .job-listing:hover {
+        transform: translateY(-5px);
+        box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    }
+    
+    .job-listing img {
+        max-width: 100%;
+        height: 200px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .job-listing h2 {
+        font-size: 1.2rem;
+        color: teal;
+        margin: 10px 0;
+    }
+    
+    .job-listing p {
+        font-size: 0.9rem;
+        color: #666;
+    }
+    
+    .job-listing button {
+        padding: 10px 15px;
+        font-size: 1rem;
+        background-color: teal;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 10px 5px;
+    }
+    
+    .job-listing button:hover {
+        background-color: #006666;
+    }
+    
+    @media screen and (max-width: 768px) {
+        .job-listings-container {
+            grid-template-columns: 1fr; /* Une seule colonne */
+        }
+    
+        .job-listing {
+            padding: 10px;
+        }
+    
+        .job-listing h2 {
+            font-size: 1rem;
+        }
+    
+        .job-listing p {
+            font-size: 0.8rem;
+        }
+    
+        .job-listing button {
+            padding: 8px 12px;
+            font-size: 0.9rem;
+        }
+    }
+    
+#job-details {
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#job-details h1 {
+    font-size: 2rem;
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+#job-details p {
+    margin: 10px 0;
+    line-height: 1.6;
+}
+
+#job-details strong {
+    font-weight: bold;
+}
+
+#job-details button {
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+#job-details button:hover {
+    background-color: #005f8a;
+}
+
+.animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('consultant.jpg') no-repeat center center / cover;
+    z-index: -1; 
+    opacity: 0.6; 
+    animation: slideBackground 10s infinite alternate ease-in-out;
+}
+.animated-background2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('pic1.jpg') no-repeat center center / cover;
+    z-index: -1; 
+    opacity: 0.6; 
+    animation: slideBackground 10s infinite alternate ease-in-out;
+}
+
+
+
+@keyframes slideBackground {
+    0% {
+        transform: scale(1) translateX(0);
+    }
+    50% {
+        transform: scale(1.1) translateX(20px);
+    }
+    100% {
+        transform: scale(1) translateX(0);
+    }
+}

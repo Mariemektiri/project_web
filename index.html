@@ -1,42 +1,45 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Enginhire - Page d'accueil</title>
+    <title>Enginhire - Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="signup.html">S'inscrire</a></li>
-            <li><a href="login.html">Connexion</a></li>
-            <li><a href="job_list.html">Liste des offres d'emploi</a></li>
-            <li><a href="search.html">Rechercher un emploi</a></li>
-            <li><a href="add-job.html">Ajouter offre d'emploi</a></li>
-            <li><a href="contact.html">Contact</a></li>
-           
-        </ul>
-    </nav>
+   <nav>
+    <h1 class="logo">Enginhire</h1>
+    <ul>
+        <li style="--index: 0;"><a href="index.html">Home</a></li>
+        <li style="--index: 1;"><a href="signup.html">Sign Up</a></li>
+        <li style="--index: 2;"><a href="login.html">Login</a></li>
+        <li style="--index: 3;"><a href="job_list.html">Job Listings</a></li>
+        <li style="--index: 4;"><a href="search.html">Search for a Job</a></li>
+        <li style="--index: 5;"><a href="add-job.html">Post a Job</a></li>
+        <li style="--index: 6;"><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+    <div class="animated-background"></div>
+    <h1 class="style1">Welcome to Enginhire</h1>
+    <p class="style2">Search and apply for the best engineering job opportunities.</p>
     
-    <h1>Bienvenue sur Enginhire</h1>
-    <p>Recherchez et postulez aux meilleures offres d'emploi en ingénierie.</p>
-    
-    <h2>Rechercher des offres</h2>
+    <h2><center>Search for Jobs</center></h2>
     <form action="/search.html" method="get">
-        <label for="search">Mots-clés :</label>
+        <label for="search">Keywords:</label>
         <input type="text" id="search" name="search">
         
-        <label for="location">Lieu :</label>
+        <label for="location">Location:</label>
         <input type="text" id="location" name="location">
         
-        <button type="submit">Rechercher</button>
+        <button type="submit">Search</button>
     </form>
 
-    <h2>Créer un compte</h2>
-    <a href="signup.html">S'inscrire</a> | <a href="login.html">Se connecter</a>
+    <h2>Create an Account:</h2>
+    <a class="button3" href="signup.html">Sign Up</a> | <a class="button3" href="login.html">Log In</a>
 
     <footer>
-        <p>&copy; 2024 Enginhire. Tous droits réservés.</p>
+        <p>&copy; 2024 Enginhire. All rights reserved.</p>
     </footer>
 </body>
 </html>

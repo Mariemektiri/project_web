@@ -1,30 +1,120 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Détails de l'offre - Enginhire</title>
+    <title>Job Details - Enginhire</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Simulate job data for each job offer
+        const jobData = {
+            1: {
+                title: "Full Stack Developer",
+                location: "Rabat",
+                company: "TechCorp",
+                description: "Join our team to develop innovative solutions for international clients.",
+                salary: "8000 DH"
+            },
+            2: {
+                title: "IT Project Manager",
+                location: "Casablanca",
+                company: "Innovate Solutions",
+                description: "Oversee complex projects and work with multidisciplinary teams.",
+                salary: "12000 DH"
+            },
+            3: {
+                title: "UI/UX Designer",
+                location: "Marrakech",
+                company: "DesignWorks",
+                description: "Create intuitive user interfaces for our digital products.",
+                salary: "9000 DH"
+            },
+            4: {
+                title: "Data Analyst",
+                location: "Fès",
+                company: "DataAnalyticsPro",
+                description: "Analyze data to generate actionable insights for businesses.",
+                salary: "10000 DH"
+            },
+            5: {
+                title: "DevOps Engineer",
+                location: "Tanger",
+                company: "CloudNet",
+                description: "Manage cloud systems and improve CI/CD pipelines.",
+                salary: "11000 DH"
+            },
+            6: {
+                title: "Network Technician",
+                location: "Meknès",
+                company: "NetSolutions",
+                description: "Install and maintain local and wide-area networks for our clients.",
+                salary: "7000 DH"
+            },
+            7: {
+                title: "ERP Consultant",
+                location: "Rabat",
+                company: "BizSolutions",
+                description: "Help our clients integrate and optimize their ERP systems.",
+                salary: "9500 DH"
+            },
+            8: {
+                title: "Digital Marketing Specialist",
+                location: "Casablanca",
+                company: "DigitalBoost",
+                description: "Design and execute effective digital marketing campaigns.",
+                salary: "8500 DH"
+            },
+            9: {
+                title: "Cloud Architect",
+                location: "Agadir",
+                company: "CloudArchitects",
+                description: "Design cloud solutions for international businesses.",
+                salary: "15000 DH"
+            }
+        };
+
+        // Load details based on ID in the URL
+        window.onload = () => {
+            const params = new URLSearchParams(window.location.search);
+            const jobId = params.get("id");
+            const job = jobData[jobId];
+
+            if (job) {
+                document.getElementById("job-title").textContent = job.title;
+                document.getElementById("job-location").textContent = job.location;
+                document.getElementById("job-company").textContent = job.company;
+                document.getElementById("job-description").textContent = job.description;
+                document.getElementById("job-salary").textContent = job.salary;
+            } else {
+                document.getElementById("job-details").innerHTML = "<p>Job not found.</p>";
+            }
+        };
+    </script>
 </head>
 <body>
     <nav>
+        <h1 class="logo">Enginhire</h1>
         <ul>
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="signup.html">S'inscrire</a></li>
-            <li><a href="login.html">Connexion</a></li>
-            <li><a href="job_list.html">Liste des offres d'emploi</a></li>
-            <li><a href="search.html">Rechercher un emploi</a></li>
-            <li><a href="add-job.html">Ajouter offre d'emploi</a></li>
-            <li><a href="contact.html">Contact</a></li>
-           
+            <li style="--index: 0;"><a href="index.html">Home</a></li>
+            <li style="--index: 1;"><a href="signup.html">Sign Up</a></li>
+            <li style="--index: 2;"><a href="login.html">Login</a></li>
+            <li style="--index: 3;"><a href="job_list.html">Job Listings</a></li>
+            <li style="--index: 4;"><a href="search.html">Search for a Job</a></li>
+            <li style="--index: 5;"><a href="add-job.html">Post a Job</a></li>
+            <li style="--index: 6;"><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <h1>Titre du poste</h1>
-    <p>Lieu : <strong>[Lieu]</strong></p>
-    <p>Description de l'offre : </p>
-    <p>[Description complète de l'offre]</p>
-    
-   <a href="apply.html"><button type="submit">postuler</button></a>
-   <footer>
-    <p>&copy; 2024 Enginhire. Tous droits réservés.</p>
-</footer>
+    <div id="job-details">
+        <h1 id="job-title"></h1>
+        <p>Location: <strong id="job-location"></strong></p>
+        <p>Company: <strong id="job-company"></strong></p>
+        <p>Job Description:</p>
+        <p id="job-description"></p>
+        <p>Salary: <strong id="job-salary"></strong></p>
+        <a href="apply.html"><button>Apply</button></a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Enginhire. All rights reserved.</p>
+    </footer>
 </body>
 </html>
