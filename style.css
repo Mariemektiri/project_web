@@ -11,9 +11,13 @@ body, h1, p, ul, li, form, input, label, nav, footer {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', serif;
+    font-size: 18px;
     
     
+}
+h1{
+    font-size: 40px;
 }
 
 html, body {
@@ -73,16 +77,17 @@ nav ul li a {
     font-size: 16px;
     color: #fff;
     position: relative;
-    z-index: 1; /* Gérer la superposition avec le cercle */
+    z-index: 1;
     transition: color 0.3s ease-in-out;
-    text-decoration: none; /* Removes underline for links */
-    padding: 15px 15px; /* Adds padding inside the link area */
-    border-radius: 10%; /* Ensures the circular look for links */
+    text-decoration: none; 
+    padding: 15px 15px; 
+    border-radius: 10%; 
     background-color: rgba(0, 0, 0, 0);
-    
+    font-family: 'Times New Roman', serif;
+    font-size: 20px;
 }
 
-/* Cercle transparent autour des liens */
+
 nav ul li::before {
     content: '';
     position: absolute;
@@ -97,14 +102,14 @@ nav ul li::before {
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
-/* Effet au survol (hover) */
+
 nav ul li:hover::before {
     
     transform: translate(-50%, -50%) scale(1.2);
 }
 
 nav ul li:hover a {
-    color: #080807; /* Couleur du texte au survol */
+    color: #080807; 
     text-decoration: none;
     
 }
@@ -214,25 +219,25 @@ footer {
     margin-bottom: 80px;
 
 }
-/* Animation fadeIn pour les titres */
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-20px); }
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* Animation zoomIn pour les textes d'accueil */
+
 @keyframes zoomIn {
     from { transform: scale(0.8); opacity: 0; }
     to { transform: scale(1); opacity: 1; }
 }
 
-/* Animation slideInLeft pour les boutons ou les sections */
+
 @keyframes slideInLeft {
     from { transform: translateX(-100px); opacity: 0; }
     to { transform: translateX(0); opacity: 1; }
 }
 
-/* Ajout des styles d'animation */
+
 h1.style1 {
     animation: zoomIn 1s ease-in-out;
 }
@@ -244,10 +249,10 @@ p.style2 {
 nav ul li {
     animation: slideInLeft 0.8s ease-in-out;
     animation-delay: calc(0.2s * var(--index));
-     /* Masquer avant l'animation */
+     
 }
 
-/* Animation sur hover pour les boutons */
+
 button, .button3 {
     transition: transform 0.3s, background-color 0.3s;
 }
@@ -374,7 +379,7 @@ form button:active {
     
     @media screen and (max-width: 768px) {
         .job-listings-container {
-            grid-template-columns: 1fr; /* Une seule colonne */
+            grid-template-columns: 1fr;
         }
     
         .job-listing {

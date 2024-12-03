@@ -6,21 +6,21 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <script>
-        // Add event listener for form submission
+        
         document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('loginForm').addEventListener('submit', function(e) {
-                e.preventDefault(); // Prevent traditional form submission
+                e.preventDefault(); 
 
-                // Get form values
+                
                 const username = document.getElementById('username').value;
                 const password = document.getElementById('password').value;
 
-                // Check if username and password are filled
+                
                 if (username && password) {
-                    // Store username in a cookie
+                   
                     setUserCookie(username);
 
-                    // Display a welcome alert
+                    
                     alert("Welcome, " + username);
                 } else {
                     alert("Please fill in all fields.");
@@ -28,7 +28,7 @@
             });
         });
 
-        // Function to set the cookie
+       
         function setUserCookie(username) {
             document.cookie = "username=" + username + "; expires=Thu, 31 Dec 2024 23:59:59 UTC; path=/";
         }
